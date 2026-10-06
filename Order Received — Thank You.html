@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Order Received — Thank You</title>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1832831950619445');fbq('init','1081718088153259');
+const qp=new URLSearchParams(window.location.search);
+const orderValue=qp.get('value')||0;
+const orderPack=qp.get('pack')||'';
+fbq('track','Lead',{value:parseFloat(orderValue),currency:'NGN',content_name:qp.get('content')||'174-LED Solar Flood Light',content_category:orderPack});
+</script>
+<style>
+:root{--bg:#0b0b0f;--card:#1b1b28;--amber:#ffb020;--green:#1fae63;--text:#f5f5f7;--muted:#b8b8c4;--line:#2a2a3a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Arial,sans-serif;min-height:100%;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  display:flex;align-items:center;justify-content:center;padding-left:20px;padding-right:20px}
+.wrap{max-width:480px;width:100%;text-align:center;padding:40px 0}
+.check{width:84px;height:84px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:40px;animation:pop .5s ease}
+@keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.1)}100%{transform:scale(1)}}
+h1{font-size:clamp(22px,6vw,28px);font-weight:900;margin-bottom:10px}
+p{color:var(--muted);line-height:1.6;margin-bottom:14px;font-size:15px}
+.steps{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:20px 0}
+.step{display:flex;gap:12px;margin-bottom:16px}
+.step:last-child{margin-bottom:0}
+.num{flex:0 0 28px;height:28px;border-radius:50%;background:var(--amber);color:#1a1200;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step p{margin:0;font-size:14px}
+.wa{display:block;background:#25D366;color:#fff;font-weight:800;padding:16px;border-radius:12px;text-decoration:none;margin-top:10px}
+.note{font-size:13px;color:#888;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="check">✓</div>
+  <h1>Your Order Has Been Received!</h1>
+  <p>Thank you for ordering the 174-LED High-Brightness Solar Work Light. You're one step closer to never being caught in darkness again.</p>
+
+  <div class="steps">
+    <div class="step"><div class="num">1</div><p>Our team will call or WhatsApp you within the day to confirm your order and delivery address.</p></div>
+    <div class="step"><div class="num">2</div><p>Your light ships out and travels to your location — free delivery, nationwide.</p></div>
+    <div class="step"><div class="num">3</div><p>When it arrives, inspect it first. You only pay the delivery agent once you're satisfied.</p></div>
+  </div>
+
+  <p>Didn't get a call yet, or need to change your order details? Reach us directly below.</p>
+  <a class="wa" href="https://wa.me/2349061956470?text=Hi%2C%20I%20just%20placed%20an%20order%20and%20want%20to%20confirm%20details">💬 Message Us on WhatsApp</a>
+
+  <p class="note">📲 Call/WhatsApp: 09061956470</p>
+</div>
+</body>
+</html>
